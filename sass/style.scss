@@ -2,9 +2,10 @@
 @import "./utils/mixins";
 @import "./base/base";
 @import "./components/buttons";
+@import "./components/cards";
 
 header {
-    @include flex-center-row;
+    @include flex-center-h-row;
     position: sticky;
     padding-top: 20px;
     padding-bottom: 10px;
@@ -15,9 +16,9 @@ header {
 }
  
 .localisation{
-    @include flex-center-row;
+    @include flex-center-h-row;
     gap:15px;
-    background-color: #EAEAEA;
+    background-color: $common-color;
     padding: 15px;
         &-txt{
             font-weight: 500;
@@ -25,7 +26,7 @@ header {
 }
 
 .reservation{
-    @include flex-center-column;
+    @include flex-center-h-column;
     background-color: #F7F7F7;
     text-align: center;
     padding-top:30px;
@@ -43,3 +44,39 @@ header {
         }
 }
 
+.fonctionnement{
+    padding: 20px;
+    &-cards{
+        display:flex;
+        flex-direction: column;
+        gap:20px;
+        padding-left: 10px;
+    }
+    .card{
+        @include flex-center-v-row;
+        @include card(#F7F7F7);
+        gap:15px;
+        text-align: center;
+        font-weight: 500;
+        &:hover{
+            background-color: #f5edff;
+        }
+        &:hover > i{
+            color:$primary-color;
+        }
+        .circle{
+            margin-left:-35px;
+            color: #fff;
+            width: 25px;
+            line-height: 25px;
+            border-radius: 50%;
+            font-weight: 400;
+            text-align: center;
+            font-size: 0.8rem;
+            background-color: $primary-color;
+        }
+        i{
+            color: grey;
+        }
+    }
+}
