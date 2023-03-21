@@ -4,7 +4,7 @@
 }
 
 body {
-    @include flex-center;
+    @include flex-center-row;
     margin: 0px;
 }
 
@@ -13,4 +13,9 @@ body {
     max-width: 1440px;
     padding: 0px;
     box-sizing: border-box;
+}
+
+h1
+{
+    font-weight:700;
 }

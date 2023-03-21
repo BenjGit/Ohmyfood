@@ -1,0 +1,12 @@
+%btn-common{
+    color: #fff;
+    font-size: 1rem;
+    background: linear-gradient(#e873da, #a05add);
+    padding:15px 20px;
+    border-radius:50px;
+    border: none;
+    cursor: pointer;
+    &:hover{
+        opacity: 0.7;
+    }
+}

@@ -1,21 +1,45 @@
 @import "./utils/variables";
 @import "./utils/mixins";
 @import "./base/base";
+@import "./components/buttons";
 
 header {
-    @include flex-center;
+    @include flex-center-row;
     position: sticky;
     padding-top: 20px;
     padding-bottom: 10px;
     box-shadow:0px 0px 5px grey;
+    img{
+        width: 50%;
+    }
 }
  
 .localisation{
-    @include flex-center;
+    @include flex-center-row;
     gap:15px;
     background-color: #EAEAEA;
     padding: 15px;
-    &-txt{
-        font-weight: 500;
-    }
+        &-txt{
+            font-weight: 500;
+        }
 }
+
+.reservation{
+    @include flex-center-column;
+    background-color: #F7F7F7;
+    text-align: center;
+    padding-top:30px;
+    padding-bottom: 50px;
+        h1{
+            margin:$no-margin;
+        }
+        p{
+            font-weight: 300;
+            font-size: 1.1rem;
+        }
+        .btn-reservation{
+            @extend %btn-common;
+            margin-top: 10px;
+        }
+}
+
