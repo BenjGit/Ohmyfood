@@ -1,0 +1,21 @@
+
+* {
+    font-family: $txt-font-family;
+}
+
+@include headings{
+    font-family: $heading-font-family;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0px;
+    box-sizing: border-box;
+}
