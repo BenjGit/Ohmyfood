@@ -3,13 +3,8 @@
     font-family: $txt-font-family;
 }
 
-@include headings{
-    font-family: $heading-font-family;
-}
-
 body {
-    display: flex;
-    justify-content: center;
+    @include flex-center;
     margin: 0px;
 }
 
