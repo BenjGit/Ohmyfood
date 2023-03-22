@@ -1,0 +1,130 @@
+.localisation{
+    @include flex-center-h-row;
+    gap:15px;
+    background-color: $secondary-common-color;
+    padding: 15px;
+        &-txt{
+            font-weight: 500;
+        }
+}
+
+.reservation{
+    @include flex-center-h-column;
+    background-color: $common-color;
+    text-align: center;
+    padding-top:30px;
+    @include end-padding;
+        h1{
+            margin: $no-margin;
+        }
+        p{
+            font-weight: 300;
+            font-size: 1.1rem;
+        }
+        .btn-reservation{
+            @extend %btn-common;
+            margin-top: 10px;
+        }
+}
+
+.fonctionnement{
+    padding: 20px;
+    @include end-padding;
+    &-cards{
+        display:flex;
+        flex-direction: column;
+        gap:20px;
+        padding-left: 10px;
+    }
+    .card{
+        @include flex-center-v-row;
+        padding: 25px;
+        border-radius: 20px;
+        box-shadow: 0px 5px 8px 0px $common-color;
+        gap:15px;
+        text-align: center;
+        font-weight: 500;
+        &:hover{
+            background-color: #f5edff;
+        }
+        &:hover > i{
+            color: $primary-color;
+        }
+        .circle{
+            margin-left:-35px;
+            color: #fff;
+            width: 25px;
+            line-height: 25px;
+            border-radius: 50%;
+            font-weight: 400;
+            text-align: center;
+            font-size: 0.8rem;
+            background-color: $primary-color;
+        }
+        i{
+            color: grey;
+        }
+    }
+}
+
+.restaurants{
+    padding: 20px;
+    padding-top:30px;
+    background-color: $common-color;
+    @include end-padding;
+    &-cards{
+        display:flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .card{
+        img{
+            object-fit: cover;
+            height: 170px;
+            object-position: 50% 63%;
+            width: 100%;
+            display: block;
+            border-radius:20px 20px 0px 0px;
+        }
+        .img-txt{
+            position:relative; 
+        }
+        .nouveau
+        {
+            position:absolute;
+            color:#008766;
+            font-weight: 500;
+            top: 15px;
+            left: 240px;
+            padding: 5px 12px;
+            border-radius: 2px;
+            font-size: 0.9rem;
+            margin: 0px;
+            background-color: #99e2d0;
+        }
+        .card-content{
+            @include flex-center-v-row;
+            justify-content: space-between;
+            width:100%;
+            background-color: #fff;
+            border-radius:0px 0px 20px 20px;
+            box-shadow: 0px 10px 8px $secondary-common-color;
+        }
+        .card-txt{
+            margin:20px 0px 15px 15px;
+        }
+        .card-title{
+            margin: $no-margin;
+            font-size: 1.1rem;
+        }
+        .card-subtitle{
+            margin: $no-margin;
+            font-weight: 400;
+        }
+        i{
+            margin-right:20px;
+            background-color: #fff;
+        }
+    }
+
+}

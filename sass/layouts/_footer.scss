@@ -1,0 +1,26 @@
+footer{
+    padding: 25px;
+    background-color: #353535;
+    color:#fff;    
+    img{
+        margin-bottom: 15px;
+        width: 28%;
+        filter: invert(99%) sepia(35%) saturate(0%) hue-rotate(123deg) brightness(107%) contrast(100%);
+    }
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        font-size: 1rem;
+        a{
+            cursor: pointer;
+        }
+        a:hover{
+            color: $primary-color;
+        }
+    }
+    i{
+        width: 10px;
+        margin-right: 10px;
+    }
+}

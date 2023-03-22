@@ -28,16 +28,11 @@ h1 {
   padding: 15px 20px;
   border-radius: 50px;
   border: none;
+  box-shadow: 0px 4px 7px #c7c6c6;
   cursor: pointer;
 }
 .reservation .btn-reservation:hover {
   opacity: 0.7;
-}
-
-.fonctionnement .card {
-  padding: 25px;
-  border-radius: 20px;
-  box-shadow: 5px 5px 10px 0px #EAEAEA;
 }
 
 header {
@@ -50,6 +45,33 @@ header {
 }
 header img {
   width: 50%;
+}
+
+footer {
+  padding: 25px;
+  background-color: #353535;
+  color: #fff;
+}
+footer img {
+  margin-bottom: 15px;
+  width: 28%;
+  filter: invert(99%) sepia(35%) saturate(0%) hue-rotate(123deg) brightness(107%) contrast(100%);
+}
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 1rem;
+}
+footer .footer-content a {
+  cursor: pointer;
+}
+footer .footer-content a:hover {
+  color: #9356DC;
+}
+footer i {
+  width: 10px;
+  margin-right: 10px;
 }
 
 .localisation {
@@ -85,6 +107,7 @@ header img {
 
 .fonctionnement {
   padding: 20px;
+  padding-bottom: 50px;
 }
 .fonctionnement-cards {
   display: flex;
@@ -95,7 +118,9 @@ header img {
 .fonctionnement .card {
   display: flex;
   align-items: center;
-  background-color: #F7F7F7;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 8px 0px #F7F7F7;
   gap: 15px;
   text-align: center;
   font-weight: 500;
@@ -119,6 +144,65 @@ header img {
 }
 .fonctionnement .card i {
   color: grey;
+}
+
+.restaurants {
+  padding: 20px;
+  padding-top: 30px;
+  background-color: #F7F7F7;
+  padding-bottom: 50px;
+}
+.restaurants-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.restaurants .card img {
+  object-fit: cover;
+  height: 170px;
+  object-position: 50% 63%;
+  width: 100%;
+  display: block;
+  border-radius: 20px 20px 0px 0px;
+}
+.restaurants .card .img-txt {
+  position: relative;
+}
+.restaurants .card .nouveau {
+  position: absolute;
+  color: #008766;
+  font-weight: 500;
+  top: 15px;
+  left: 240px;
+  padding: 5px 12px;
+  border-radius: 2px;
+  font-size: 0.9rem;
+  margin: 0px;
+  background-color: #99e2d0;
+}
+.restaurants .card .card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0px 0px 20px 20px;
+  box-shadow: 0px 10px 8px #EAEAEA;
+}
+.restaurants .card .card-txt {
+  margin: 20px 0px 15px 15px;
+}
+.restaurants .card .card-title {
+  margin: 0px;
+  font-size: 1.1rem;
+}
+.restaurants .card .card-subtitle {
+  margin: 0px;
+  font-weight: 400;
+}
+.restaurants .card i {
+  margin-right: 20px;
+  background-color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

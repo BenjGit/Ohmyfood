@@ -20,7 +20,6 @@
     align-items: center;
 }
 
-@mixin card($color:#fff){
-    @extend %card;
-    background-color:$color;
+@mixin end-padding {
+    padding-bottom: 50px;
 }
