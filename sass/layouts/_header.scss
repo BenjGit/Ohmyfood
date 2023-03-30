@@ -1,12 +1,12 @@
 header {
     @include flex-center-all-row;
+    display: flex;
     position: sticky;
     padding-top: 20px;
     padding-bottom: 10px;
     box-shadow:0px 0px 5px grey;
     a{
-        position: absolute;
-        margin-right: 300px;
+        justify-self: flex-start;
         &:hover{
             color: $primary-color;
         }

@@ -38,14 +38,14 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
   position: sticky;
   padding-top: 20px;
   padding-bottom: 10px;
   box-shadow: 0px 0px 5px grey;
 }
 header a {
-  position: absolute;
-  margin-right: 300px;
+  justify-self: flex-start;
 }
 header a:hover {
   color: #9356DC;
@@ -294,7 +294,8 @@ footer .footer-content a:hover {
 }
 
 main {
-  background-color: #F7F7F7;
+  background-color: #fff;
+  flex: 0 1 auto;
 }
 main img {
   width: 100%;
@@ -302,19 +303,39 @@ main img {
   display: block;
   object-fit: cover;
 }
+@media screen and (min-width: 1024px) {
+  main img {
+    height: 350px;
+  }
+}
 
 .menu {
   position: relative;
   background-color: #F7F7F7;
   padding: 15px;
   bottom: 55px;
-  margin-bottom: -30px;
+  margin-bottom: -55px;
   border-radius: 50px 50px 0px 0px;
+}
+@media screen and (min-width: 1024px) {
+  .menu {
+    padding: 50px 15% 50px 15%;
+    margin-left: 13%;
+    margin-right: 13%;
+    bottom: 35px;
+    margin-bottom: -35px;
+  }
 }
 .menu-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media screen and (min-width: 1024px) {
+  .menu-header {
+    justify-content: center;
+    gap: 20px;
+  }
 }
 .menu-header h1 {
   font-family: "Shrikhand", cursive;
