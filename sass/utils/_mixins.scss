@@ -23,3 +23,15 @@
 @mixin end-padding {
     padding-bottom: 50px;
 }
+
+@mixin tablet-only {
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        @content;
+    }  
+}
+
+@mixin desktop-only {
+    @media screen and (min-width: map-get($breakpoints, dekstop)){
+        @content;
+    }  
+}

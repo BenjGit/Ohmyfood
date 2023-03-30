@@ -1,15 +1,33 @@
 footer{
     padding: 25px;
     background-color: #353535;
-    color:#fff;    
+    color:#fff;
+    @include desktop-only{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        padding-top: 65px;
+    }    
     img{
         margin-bottom: 15px;
         width: 28%;
         filter: invert(99%) sepia(35%) saturate(0%) hue-rotate(123deg) brightness(107%) contrast(100%);
+        @include desktop-only{
+            width: 7%;
+            margin:0px 30px 5px 100px ;
+        }
+    }
+    i{
+        width: 10px;
+        margin-right: 10px;
     }
     .footer-content{
         display: flex;
         flex-direction: column;
+        @include desktop-only{
+            flex-direction: row;
+            gap: 15px;
+        }
         gap: 5px;
         font-size: 1rem;
         a{
@@ -18,9 +36,5 @@ footer{
         a:hover{
             color: $primary-color;
         }
-    }
-    i{
-        width: 10px;
-        margin-right: 10px;
     }
 }

@@ -10,4 +10,7 @@ $tertiary-color:#99E2D0;
 $common-color:#F7F7F7;
 $secondary-common-color:#EAEAEA;
 
-$no-margin: 0px;
+$breakpoints:(
+    tablet:768px,
+    dekstop:1024px
+)

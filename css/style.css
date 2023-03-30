@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+}
+
+.main-container {
+  width: 100%;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+.menu .btn-container .btn-commander, .reservation .btn-reservation {
+  color: #fff;
+  font-size: 1rem;
+  background: linear-gradient(#e873da, #a05add);
+  padding: 15px 20px;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0px 4px 7px #c7c6c6;
+  cursor: pointer;
+}
+.menu .btn-container .btn-commander:hover, .reservation .btn-reservation:hover {
+  opacity: 0.7;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  box-shadow: 0px 0px 5px grey;
+}
+header a {
+  position: absolute;
+  margin-right: 300px;
+}
+header a:hover {
+  color: #9356DC;
+}
+@media screen and (min-width: 1024px) {
+  header {
+    padding: 30px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header svg {
+    width: 100%;
+  }
+}
+
+footer {
+  padding: 25px;
+  background-color: #353535;
+  color: #fff;
+}
+@media screen and (min-width: 1024px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    padding-top: 65px;
+  }
+}
+footer img {
+  margin-bottom: 15px;
+  width: 28%;
+  filter: invert(99%) sepia(35%) saturate(0%) hue-rotate(123deg) brightness(107%) contrast(100%);
+}
+@media screen and (min-width: 1024px) {
+  footer img {
+    width: 7%;
+    margin: 0px 30px 5px 100px;
+  }
+}
+footer i {
+  width: 10px;
+  margin-right: 10px;
+}
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer-content {
+    flex-direction: row;
+    gap: 15px;
+  }
+}
+footer .footer-content a {
+  cursor: pointer;
+}
+footer .footer-content a:hover {
+  color: #9356DC;
+}
+
+.localisation {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  background-color: #EAEAEA;
+  padding: 15px;
+}
+.localisation-txt {
+  font-weight: 500;
+}
+
+.reservation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F7F7F7;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+.reservation h1 {
+  margin: 0px;
+}
+@media screen and (min-width: 1024px) {
+  .reservation h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+}
+.reservation p {
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+.reservation .btn-reservation {
+  margin-top: 10px;
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  padding-bottom: 50px;
+  background-color: #ffffff;
+}
+@media screen and (min-width: 1024px) {
+  .fonctionnement {
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+  }
+}
+.fonctionnement-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .fonctionnement-cards {
+    flex-direction: row;
+    gap: 32px;
+  }
+}
+
+.fonctionnement .card {
+  background-color: #F7F7F7;
+  display: flex;
+  align-items: center;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 8px 0px #EAEAEA;
+  gap: 15px;
+  text-align: center;
+  font-weight: 500;
+}
+@media screen and (min-width: 1024px) {
+  .fonctionnement .card {
+    width: 33.3333333333%;
+  }
+}
+.fonctionnement .card:hover {
+  background-color: #f5edff;
+}
+.fonctionnement .card:hover > i {
+  color: #9356DC;
+}
+.fonctionnement .card .circle {
+  margin-left: -35px;
+  color: #fff;
+  width: 25px;
+  line-height: 25px;
+  border-radius: 50%;
+  font-weight: 400;
+  text-align: center;
+  font-size: 0.8rem;
+  background-color: #9356DC;
+}
+.fonctionnement .card i {
+  color: grey;
+}
+
+.restaurants {
+  padding: 20px;
+  padding-top: 30px;
+  background-color: #F7F7F7;
+  padding-bottom: 50px;
+}
+@media screen and (min-width: 1024px) {
+  .restaurants {
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .restaurants .dekstop-restaurants {
+    display: flex;
+    gap: 90px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .restaurants .dekstop-restaurants a {
+    width: 50%;
+  }
+}
+.restaurants a {
+  text-decoration: none;
+}
+.restaurants-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .restaurants-cards {
+    gap: 50px;
+  }
+}
+
+.restaurants .card img {
+  object-fit: cover;
+  height: 170px;
+  object-position: 50% 63%;
+  width: 100%;
+  display: block;
+  border-radius: 20px 20px 0px 0px;
+}
+.restaurants .card .img-txt {
+  position: relative;
+}
+.restaurants .card .nouveau {
+  position: absolute;
+  color: #008766;
+  font-weight: 500;
+  top: 15px;
+  left: 240px;
+  padding: 5px 12px;
+  border-radius: 2px;
+  font-size: 0.9rem;
+  margin: 0px;
+  background-color: #99e2d0;
+}
+.restaurants .card .card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0px 0px 20px 20px;
+  box-shadow: 0px 10px 8px #EAEAEA;
+}
+.restaurants .card .card-txt {
+  margin: 20px 0px 15px 15px;
+}
+.restaurants .card .card-title {
+  margin: 0px;
+  font-size: 1.1rem;
+}
+.restaurants .card .card-subtitle {
+  margin: 0px;
+  font-weight: 400;
+}
+.restaurants .card i {
+  margin-right: 20px;
+  background-color: #fff;
+}
+
+main {
+  background-color: #F7F7F7;
+}
+main img {
+  width: 100%;
+  height: 270px;
+  display: block;
+  object-fit: cover;
+}
+
+.menu {
+  position: relative;
+  background-color: #F7F7F7;
+  padding: 15px;
+  bottom: 55px;
+  margin-bottom: -30px;
+  border-radius: 50px 50px 0px 0px;
+}
+.menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu-header h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.82rem;
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.menu-header i {
+  margin-right: 20px;
+}
+.menu .btn-container {
+  display: flex;
+  justify-content: center;
+}
+.menu .btn-container .btn-commander {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.menu-title {
+  font-weight: 300;
+  font-size: 1.1rem;
+  border-bottom: 3px solid #99E2D0;
+  padding-bottom: 5px;
+  width: 13%;
+}
+
+.entrees, .plats, .desserts {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+.entrees .card, .plats .card, .desserts .card {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 15px 20px 15px 10px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 5px 8px 0px #EAEAEA;
+  font-weight: 500;
+}
+.entrees .card .menu-name, .plats .card .menu-name, .desserts .card .menu-name {
+  display: flex;
+  flex-direction: column;
+}
+.entrees .card h3, .entrees .card p, .plats .card h3, .plats .card p, .desserts .card h3, .desserts .card p {
+  margin: 0px;
+  width: 270px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.entrees .card p, .plats .card p, .desserts .card p {
+  font-weight: 300;
+  font-size: 0.93rem;
+}
+.entrees .card .price, .plats .card .price, .desserts .card .price {
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=style.css.map */

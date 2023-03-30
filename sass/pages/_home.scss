@@ -15,7 +15,11 @@
     padding-top:30px;
     @include end-padding;
         h1{
-            margin: $no-margin;
+            margin: 0px;
+            @include desktop-only{
+                font-size: 2.5rem;
+                margin-bottom: 10px;
+            }
         }
         p{
             font-weight: 300;
@@ -27,43 +31,59 @@
         }
 }
 
-.fonctionnement{
+.fonctionnement{  
+    display:flex;
+    flex-direction: column;
     padding: 20px;
     @include end-padding;
+    background-color: #ffffff;
+    @include desktop-only{
+        padding-left: 12.5%;
+        padding-right: 12.5%;
+    }
     &-cards{
         display:flex;
         flex-direction: column;
+        @include desktop-only{
+            flex-direction: row;
+            gap: 32px;
+        }
         gap:20px;
         padding-left: 10px;
     }
-    .card{
-        @include flex-center-v-row;
-        padding: 25px;
-        border-radius: 20px;
-        box-shadow: 0px 5px 8px 0px $common-color;
-        gap:15px;
+}
+
+.fonctionnement .card{
+    @include desktop-only{
+        width:calc(100%/3);
+    }
+    background-color: $common-color;
+    @include flex-center-v-row;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 8px 0px $secondary-common-color;
+    gap:15px;
+    text-align: center;
+    font-weight: 500;
+    &:hover{
+        background-color: #f5edff;
+    }
+    &:hover > i{
+        color: $primary-color;
+    }
+    .circle{
+        margin-left:-35px;
+        color: #fff;
+        width: 25px;
+        line-height: 25px;
+        border-radius: 50%;
+        font-weight: 400;
         text-align: center;
-        font-weight: 500;
-        &:hover{
-            background-color: #f5edff;
-        }
-        &:hover > i{
-            color: $primary-color;
-        }
-        .circle{
-            margin-left:-35px;
-            color: #fff;
-            width: 25px;
-            line-height: 25px;
-            border-radius: 50%;
-            font-weight: 400;
-            text-align: center;
-            font-size: 0.8rem;
-            background-color: $primary-color;
-        }
-        i{
-            color: grey;
-        }
+        font-size: 0.8rem;
+        background-color: $primary-color;
+    }
+    i{
+        color: grey;
     }
 }
 
@@ -72,59 +92,80 @@
     padding-top:30px;
     background-color: $common-color;
     @include end-padding;
+    @include desktop-only{
+        padding-left: 12.5%;
+        padding-right: 12.5%;
+    }
+    .dekstop-restaurants{
+        @include desktop-only{
+            display: flex;
+            gap: 90px;
+        }
+        a{
+            @include desktop-only{
+            width:50%;
+            }
+        }
+    }
+    a{
+        text-decoration: none;
+    }
     &-cards{
         display:flex;
         flex-direction: column;
         gap: 20px;
-    }
-    .card{
-        img{
-            object-fit: cover;
-            height: 170px;
-            object-position: 50% 63%;
-            width: 100%;
-            display: block;
-            border-radius:20px 20px 0px 0px;
-        }
-        .img-txt{
-            position:relative; 
-        }
-        .nouveau
-        {
-            position:absolute;
-            color:#008766;
-            font-weight: 500;
-            top: 15px;
-            left: 240px;
-            padding: 5px 12px;
-            border-radius: 2px;
-            font-size: 0.9rem;
-            margin: 0px;
-            background-color: #99e2d0;
-        }
-        .card-content{
-            @include flex-center-v-row;
-            justify-content: space-between;
-            width:100%;
-            background-color: #fff;
-            border-radius:0px 0px 20px 20px;
-            box-shadow: 0px 10px 8px $secondary-common-color;
-        }
-        .card-txt{
-            margin:20px 0px 15px 15px;
-        }
-        .card-title{
-            margin: $no-margin;
-            font-size: 1.1rem;
-        }
-        .card-subtitle{
-            margin: $no-margin;
-            font-weight: 400;
-        }
-        i{
-            margin-right:20px;
-            background-color: #fff;
+        @include desktop-only{
+            gap: 50px;
         }
     }
+}
 
+.restaurants .card{
+    img{
+        object-fit: cover;
+        height: 170px;
+        object-position: 50% 63%;
+        width: 100%;
+        display: block;
+        border-radius:20px 20px 0px 0px;
+    }
+    .img-txt{
+        position:relative; 
+    }
+    .nouveau
+    {
+        position:absolute;
+        color:#008766;
+        font-weight: 500;
+        top: 15px;
+        left: 240px;
+        padding: 5px 12px;
+        border-radius: 2px;
+        font-size: 0.9rem;
+        margin: 0px;
+        background-color: #99e2d0;
+    }
+    .card-content{
+        @include flex-center-v-row;
+        justify-content: space-between;
+        width:100%;
+        background-color: #fff;
+        border-radius:0px 0px 20px 20px;
+        box-shadow: 0px 10px 8px $secondary-common-color;
+    }
+    .card-txt{
+        margin:20px 0px 15px 15px;
+    }
+    .card-title{
+        margin: 0px;
+        font-size: 1.1rem;
+    }
+    .card-subtitle{
+        margin: 0px;
+        font-weight: 400;
+    }
+    i{
+        margin-right:20px;
+        background-color: #fff;
+    }
 }
