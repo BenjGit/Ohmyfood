@@ -1,0 +1,14 @@
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes background-animation {
+    from {
+        width: 0;
+    }
+    to {
+        width: 25%;
+    }
+}

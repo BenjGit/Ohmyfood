@@ -10,7 +10,10 @@ $tertiary-color:#99E2D0;
 $common-color:#F7F7F7;
 $secondary-common-color:#EAEAEA;
 
+$delay: 0.5s;
+$max-children: 4;
+
 $breakpoints:(
-    tablet:768px,
-    dekstop:1024px
+    tablet:600px,
+    desktop:992px
 )

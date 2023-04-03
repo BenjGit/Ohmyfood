@@ -41,6 +41,10 @@
         padding-left: 12.5%;
         padding-right: 12.5%;
     }
+    @include tablet-only{
+        padding-left: 12.5%;
+        padding-right: 12.5%;
+    }
     &-cards{
         display:flex;
         flex-direction: column;
@@ -91,14 +95,24 @@
     padding: 20px;
     padding-top:30px;
     background-color: $common-color;
+    .dekstop-restaurants{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
     @include end-padding;
     @include desktop-only{
+        padding-left: 12.5%;
+        padding-right: 12.5%;
+    }
+    @include tablet-only{
         padding-left: 12.5%;
         padding-right: 12.5%;
     }
     .dekstop-restaurants{
         @include desktop-only{
             display: flex;
+            flex-direction: row;
             gap: 90px;
         }
         a{
@@ -121,6 +135,7 @@
 }
 
 .restaurants .card{
+    position: relative;
     img{
         object-fit: cover;
         height: 170px;
@@ -129,19 +144,17 @@
         display: block;
         border-radius:20px 20px 0px 0px;
     }
-    .img-txt{
-        position:relative; 
-    }
     .nouveau
     {
         position:absolute;
         color:#008766;
         font-weight: 500;
-        top: 15px;
-        left: 240px;
+        top: 5%;
+        right: 5%;
         padding: 5px 12px;
         border-radius: 2px;
         font-size: 0.9rem;
+        width: 60px;
         margin: 0px;
         background-color: #99e2d0;
     }
@@ -164,8 +177,17 @@
         margin: 0px;
         font-weight: 400;
     }
-    i{
+    .heart{
         margin-right:20px;
-        background-color: #fff;
+        fill: #fff;
+        fill: none;
+        stroke: #000;
+        stroke-width: 30;
+        width: 20px;
+        &:hover{
+            stroke: url("#gradient");
+            stroke-width: 30;
+            fill:url("#gradient");
+        }
     }
 }

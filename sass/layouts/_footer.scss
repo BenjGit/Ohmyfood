@@ -10,10 +10,10 @@ footer{
     }    
     img{
         margin-bottom: 15px;
-        width: 28%;
+        width: 180px;
         filter: invert(99%) sepia(35%) saturate(0%) hue-rotate(123deg) brightness(107%) contrast(100%);
         @include desktop-only{
-            width: 7%;
+            width: 100px;
             margin:0px 30px 5px 100px ;
         }
     }

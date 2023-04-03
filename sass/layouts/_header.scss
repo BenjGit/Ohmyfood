@@ -1,12 +1,10 @@
 header {
     @include flex-center-all-row;
-    display: flex;
     position: sticky;
-    padding-top: 20px;
-    padding-bottom: 10px;
+    padding: 20px 41px 10px 20px;
     box-shadow:0px 0px 5px grey;
-    a{
-        justify-self: flex-start;
+    a{  
+        margin-right: auto;
         &:hover{
             color: $primary-color;
         }
@@ -15,6 +13,7 @@ header {
         padding: 30px;
     }
     svg{
+        margin-right: auto;
         @include desktop-only{
             width: 100%;
         }

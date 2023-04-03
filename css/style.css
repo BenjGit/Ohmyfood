@@ -20,6 +20,19 @@ h1 {
   font-weight: 700;
 }
 
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes background-animation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 25%;
+  }
+}
 .menu .btn-container .btn-commander, .reservation .btn-reservation {
   color: #fff;
   font-size: 1rem;
@@ -38,24 +51,25 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  display: flex;
   position: sticky;
-  padding-top: 20px;
-  padding-bottom: 10px;
+  padding: 20px 41px 10px 20px;
   box-shadow: 0px 0px 5px grey;
 }
 header a {
-  justify-self: flex-start;
+  margin-right: auto;
 }
 header a:hover {
   color: #9356DC;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   header {
     padding: 30px;
   }
 }
-@media screen and (min-width: 1024px) {
+header svg {
+  margin-right: auto;
+}
+@media screen and (min-width: 992px) {
   header svg {
     width: 100%;
   }
@@ -66,7 +80,7 @@ footer {
   background-color: #353535;
   color: #fff;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   footer {
     display: flex;
     flex-direction: row-reverse;
@@ -76,12 +90,12 @@ footer {
 }
 footer img {
   margin-bottom: 15px;
-  width: 28%;
+  width: 180px;
   filter: invert(99%) sepia(35%) saturate(0%) hue-rotate(123deg) brightness(107%) contrast(100%);
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   footer img {
-    width: 7%;
+    width: 100px;
     margin: 0px 30px 5px 100px;
   }
 }
@@ -95,7 +109,7 @@ footer .footer-content {
   gap: 5px;
   font-size: 1rem;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   footer .footer-content {
     flex-direction: row;
     gap: 15px;
@@ -131,7 +145,7 @@ footer .footer-content a:hover {
 .reservation h1 {
   margin: 0px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .reservation h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
@@ -152,7 +166,13 @@ footer .footer-content a:hover {
   padding-bottom: 50px;
   background-color: #ffffff;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
+  .fonctionnement {
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+  }
+}
+@media screen and (min-width: 600px) {
   .fonctionnement {
     padding-left: 12.5%;
     padding-right: 12.5%;
@@ -164,7 +184,7 @@ footer .footer-content a:hover {
   gap: 20px;
   padding-left: 10px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .fonctionnement-cards {
     flex-direction: row;
     gap: 32px;
@@ -182,7 +202,7 @@ footer .footer-content a:hover {
   text-align: center;
   font-weight: 500;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .fonctionnement .card {
     width: 33.3333333333%;
   }
@@ -214,19 +234,31 @@ footer .footer-content a:hover {
   background-color: #F7F7F7;
   padding-bottom: 50px;
 }
-@media screen and (min-width: 1024px) {
+.restaurants .dekstop-restaurants {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (min-width: 992px) {
   .restaurants {
     padding-left: 12.5%;
     padding-right: 12.5%;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 600px) {
+  .restaurants {
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+  }
+}
+@media screen and (min-width: 992px) {
   .restaurants .dekstop-restaurants {
     display: flex;
+    flex-direction: row;
     gap: 90px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .restaurants .dekstop-restaurants a {
     width: 50%;
   }
@@ -239,12 +271,15 @@ footer .footer-content a:hover {
   flex-direction: column;
   gap: 20px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .restaurants-cards {
     gap: 50px;
   }
 }
 
+.restaurants .card {
+  position: relative;
+}
 .restaurants .card img {
   object-fit: cover;
   height: 170px;
@@ -253,18 +288,16 @@ footer .footer-content a:hover {
   display: block;
   border-radius: 20px 20px 0px 0px;
 }
-.restaurants .card .img-txt {
-  position: relative;
-}
 .restaurants .card .nouveau {
   position: absolute;
   color: #008766;
   font-weight: 500;
-  top: 15px;
-  left: 240px;
+  top: 5%;
+  right: 5%;
   padding: 5px 12px;
   border-radius: 2px;
   font-size: 0.9rem;
+  width: 60px;
   margin: 0px;
   background-color: #99e2d0;
 }
@@ -288,9 +321,18 @@ footer .footer-content a:hover {
   margin: 0px;
   font-weight: 400;
 }
-.restaurants .card i {
+.restaurants .card .heart {
   margin-right: 20px;
-  background-color: #fff;
+  fill: #fff;
+  fill: none;
+  stroke: #000;
+  stroke-width: 30;
+  width: 20px;
+}
+.restaurants .card .heart:hover {
+  stroke: url("#gradient");
+  stroke-width: 30;
+  fill: url("#gradient");
 }
 
 main {
@@ -303,7 +345,7 @@ main img {
   display: block;
   object-fit: cover;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   main img {
     height: 350px;
   }
@@ -317,11 +359,20 @@ main img {
   margin-bottom: -55px;
   border-radius: 50px 50px 0px 0px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .menu {
     padding: 50px 15% 50px 15%;
     margin-left: 13%;
     margin-right: 13%;
+    bottom: 35px;
+    margin-bottom: -35px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .menu {
+    padding: 50px 15% 50px 15%;
+    margin-left: 5%;
+    margin-right: 5%;
     bottom: 35px;
     margin-bottom: -35px;
   }
@@ -331,7 +382,7 @@ main img {
   align-items: center;
   justify-content: space-between;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .menu-header {
     justify-content: center;
     gap: 20px;
@@ -371,6 +422,9 @@ main img {
   margin-bottom: 40px;
 }
 .entrees .card, .plats .card, .desserts .card {
+  position: relative;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -379,6 +433,31 @@ main img {
   border-radius: 20px;
   box-shadow: 0px 5px 8px 0px #EAEAEA;
   font-weight: 500;
+}
+.entrees .card:nth-child(1), .plats .card:nth-child(1), .desserts .card:nth-child(1) {
+  animation-delay: 0s;
+}
+.entrees .card:nth-child(2), .plats .card:nth-child(2), .desserts .card:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.entrees .card:nth-child(3), .plats .card:nth-child(3), .desserts .card:nth-child(3) {
+  animation-delay: 1s;
+}
+.entrees .card:nth-child(4), .plats .card:nth-child(4), .desserts .card:nth-child(4) {
+  animation-delay: 1.5s;
+}
+.entrees .card .animation-box-slide, .plats .card .animation-box-slide, .desserts .card .animation-box-slide {
+  position: absolute;
+  border-radius: 0px 20px 20px 0px;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background-color: #99E2D0;
+  color: #fff;
+}
+.entrees .card:hover .animation-box-slide, .plats .card:hover .animation-box-slide, .desserts .card:hover .animation-box-slide {
+  animation: background-animation 0.3s forwards;
 }
 .entrees .card .menu-name, .plats .card .menu-name, .desserts .card .menu-name {
   display: flex;
