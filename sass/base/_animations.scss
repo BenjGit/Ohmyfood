@@ -12,3 +12,19 @@
         width: 25%;
     }
 }
+@keyframes margin-animation {
+    from{
+        margin-right: 0;
+    }
+    to{
+        margin-right: 25%;
+    }
+}
+@keyframes width-animation {
+    from{
+        width: 270px;
+    }
+    to{
+        width: calc(270px * 0.7);
+    }
+}

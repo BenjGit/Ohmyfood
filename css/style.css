@@ -33,6 +33,22 @@ h1 {
     width: 25%;
   }
 }
+@keyframes margin-animation {
+  from {
+    margin-right: 0;
+  }
+  to {
+    margin-right: 25%;
+  }
+}
+@keyframes width-animation {
+  from {
+    width: 270px;
+  }
+  to {
+    width: 189px;
+  }
+}
 .menu .btn-container .btn-commander, .reservation .btn-reservation {
   color: #fff;
   font-size: 1rem;
@@ -456,26 +472,32 @@ main img {
   background-color: #99E2D0;
   color: #fff;
 }
+.entrees .card .price, .plats .card .price, .desserts .card .price {
+  position: absolute;
+  right: 5%;
+  font-weight: 700;
+  transition: margin-right 0.3s;
+}
 .entrees .card:hover .animation-box-slide, .plats .card:hover .animation-box-slide, .desserts .card:hover .animation-box-slide {
   animation: background-animation 0.3s forwards;
 }
-.entrees .card .menu-name, .plats .card .menu-name, .desserts .card .menu-name {
-  display: flex;
-  flex-direction: column;
+.entrees .card:hover .price, .plats .card:hover .price, .desserts .card:hover .price {
+  margin-right: 25%;
+}
+.entrees .card:hover h3, .entrees .card:hover p, .plats .card:hover h3, .plats .card:hover p, .desserts .card:hover h3, .desserts .card:hover p {
+  animation: width-animation 0.3s forwards;
 }
 .entrees .card h3, .entrees .card p, .plats .card h3, .plats .card p, .desserts .card h3, .desserts .card p {
   margin: 0px;
-  width: 270px;
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 270px;
+  transition: margin-right 0.3s;
 }
 .entrees .card p, .plats .card p, .desserts .card p {
   font-weight: 300;
   font-size: 0.93rem;
-}
-.entrees .card .price, .plats .card .price, .desserts .card .price {
-  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */
