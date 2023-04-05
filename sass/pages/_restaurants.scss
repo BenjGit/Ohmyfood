@@ -91,6 +91,7 @@ main{
         box-shadow: 0px 5px 8px 0px $secondary-common-color;
         font-weight: 500;
         .animation-box-slide{
+            @include flex-center-all-row;
             position:absolute;
             border-radius:0px 20px 20px 0px;
             top: 0;
@@ -99,22 +100,37 @@ main{
             height: 100%;
             background-color: $tertiary-color;
             color:#fff;
+            i{
+                scale: 0;
+                font-size: 1.75rem;
+            }
         }
         .price{
             position: absolute;
             right: 5%;
             font-weight: 700;
-            transition: margin-right 0.3s;
         }
         &:hover{
             .animation-box-slide{
                 animation: background-animation 0.3s forwards;
             }
             .price{
-                margin-right: 25%;
+                animation: margin-animation 0.3s forwards;
             }
             h3,p{
-                animation:  width-animation 0.3s forwards;
+                @include phone-only {
+                    animation:  width-animation-phone 0.3s forwards;
+                }
+                @include tablet-only {
+                    animation:  width-animation-tablet 0.3s forwards;
+                }
+                @include desktop-only {
+                    animation:  none;
+                }
+            }
+            i{
+                scale: 1;
+                animation: rotate-animation 0.5s;
             }
         }
         h3,p{
@@ -122,13 +138,10 @@ main{
             overflow: hidden; // hide overflowing text
             text-overflow: ellipsis; // replace overflowing text with an ellipsis
             white-space: nowrap; // prevent text from wrapping to a new line
-            width: 270px;
-            transition: margin-right 0.3s;
         }
         p{
             font-weight: 300;
             font-size: 0.93rem;
         }
-
     }
 }

@@ -20,11 +20,28 @@
         margin-right: 25%;
     }
 }
-@keyframes width-animation {
+@keyframes width-animation-phone {
     from{
-        width: 270px;
+        width: 280px;
     }
     to{
-        width: calc(270px * 0.7);
+        width: calc(280px * 0.65);
+    }
+}
+@keyframes width-animation-tablet {
+    from{
+        width:280px;
+    }
+    to{
+        width: calc(280px * 0.75);
+    }
+}
+
+@keyframes rotate-animation {
+    from{
+        rotate: -360deg;
+    }
+    to{
+        rotate: 0deg;
     }
 }
