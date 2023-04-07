@@ -14,8 +14,9 @@ header {
     }
     svg{
         margin-right: auto;
-        @include desktop-only{
-            width: 100%;
+        width: 100%;
+        @include small-phone-only{
+            height: 30px;
         }
     }
 }

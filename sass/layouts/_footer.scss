@@ -12,6 +12,9 @@ footer{
         margin-bottom: 15px;
         width: 180px;
         filter: invert(99%) sepia(35%) saturate(0%) hue-rotate(123deg) brightness(107%) contrast(100%);
+        @include small-phone-only{
+            width: 160px;
+        }
         @include desktop-only{
             width: 100px;
             margin:0px 30px 5px 100px ;

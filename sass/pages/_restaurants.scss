@@ -18,19 +18,16 @@ main{
     bottom: 55px;
     margin-bottom: -55px;
     border-radius: 50px 50px 0px 0px;
-    @include desktop-only{
-        padding: 50px 15% 50px 15%;
-        margin-left: 13%;
-        margin-right: 13%;
-        bottom: 35px;
-        margin-bottom: -35px;
-    }
     @include tablet-only{
         padding: 50px 15% 50px 15%;
         margin-left: 5%;
         margin-right: 5%;
         bottom: 35px;
         margin-bottom: -35px;
+    }
+    @include desktop-only{
+        margin-left: 13%;
+        margin-right: 13%;
     }
     &-header{
         @include flex-center-v-row;
@@ -40,14 +37,17 @@ main{
             gap: 20px;
         }
         h1{
+            @include small-phone-only {
+                font-size: 1.5rem;
+            }
             font-family: $heading-font-family;
             font-size: 1.82rem;
             font-weight: 400;
             margin-top: 20px;
             margin-bottom: 20px;
         }
-        i{
-            margin-right: 20px;
+        .heart{
+            @extend %heart;
         }
     }
     .btn-container{
@@ -76,12 +76,6 @@ main{
     .card{
         position: relative;
         opacity: 0;
-        animation: fadeIn 1s ease-in-out forwards; 
-        @for $i from 1 through $max-children {
-            &:nth-child(#{$i}) {
-                animation-delay: $delay * ($i - 1);
-            }
-        }
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
@@ -90,6 +84,12 @@ main{
         border-radius: 20px;
         box-shadow: 0px 5px 8px 0px $secondary-common-color;
         font-weight: 500;
+        animation: fadeIn 1s ease-in-out forwards; 
+        @for $i from 1 through $max-children {
+            &:nth-child(#{$i}) {
+                animation-delay: $delay * ($i - 1);
+            }
+        }
         .animation-box-slide{
             @include flex-center-all-row;
             position:absolute;
@@ -121,6 +121,9 @@ main{
                 @include phone-only {
                     animation:  width-animation-phone 0.3s forwards;
                 }
+                @include small-phone-only {
+                    animation:  width-animation-s-phone 0.3s forwards;
+                }
                 @include tablet-only {
                     animation:  width-animation-tablet 0.3s forwards;
                 }
@@ -133,11 +136,17 @@ main{
                 animation: rotate-animation 0.5s;
             }
         }
+        .menu-name{
+            line-height: 25px;
+        }
         h3,p{
+            @include small-phone-only {
+                width: 220px;
+            }
             margin: 0px;
-            overflow: hidden; // hide overflowing text
-            text-overflow: ellipsis; // replace overflowing text with an ellipsis
-            white-space: nowrap; // prevent text from wrapping to a new line
+            overflow: hidden; 
+            text-overflow: ellipsis; 
+            white-space: nowrap;
         }
         p{
             font-weight: 300;

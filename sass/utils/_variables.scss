@@ -14,6 +14,8 @@ $delay: 0.5s;
 $max-children: 4;
 
 $breakpoints:(
+    small-phone:375px,
     tablet:600px,
-    desktop:992px
+    desktop:992px,
+    large-desktop:1600px,
 )

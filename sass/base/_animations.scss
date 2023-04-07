@@ -9,7 +9,7 @@
         width: 0;
     }
     to {
-        width: 25%;
+        width:80px;
     }
 }
 @keyframes margin-animation {
@@ -17,15 +17,25 @@
         margin-right: 0;
     }
     to{
-        margin-right: 25%;
+        margin-right:80px;
     }
 }
+
+@keyframes width-animation-s-phone {
+    from{
+        width: 220px;
+    }
+    to{
+        width: 150px;
+    }
+}
+
 @keyframes width-animation-phone {
     from{
         width: 280px;
     }
     to{
-        width: calc(280px * 0.65);
+        width: 182px;
     }
 }
 @keyframes width-animation-tablet {
@@ -33,7 +43,7 @@
         width:280px;
     }
     to{
-        width: calc(280px * 0.75);
+        width: 210px;
     }
 }
 

@@ -30,7 +30,7 @@ h1 {
     width: 0;
   }
   to {
-    width: 25%;
+    width: 80px;
   }
 }
 @keyframes margin-animation {
@@ -38,7 +38,15 @@ h1 {
     margin-right: 0;
   }
   to {
-    margin-right: 25%;
+    margin-right: 80px;
+  }
+}
+@keyframes width-animation-s-phone {
+  from {
+    width: 220px;
+  }
+  to {
+    width: 150px;
   }
 }
 @keyframes width-animation-phone {
@@ -79,6 +87,20 @@ h1 {
   opacity: 0.7;
 }
 
+.menu-header .heart, .restaurants .card .heart {
+  margin-right: 20px;
+  fill: #fff;
+  fill: none;
+  stroke: #000;
+  stroke-width: 30;
+  width: 20px;
+}
+.menu-header .heart:hover, .restaurants .card .heart:hover {
+  stroke: url("#gradient");
+  stroke-width: 30;
+  fill: url("#gradient");
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -100,10 +122,11 @@ header a:hover {
 }
 header svg {
   margin-right: auto;
+  width: 100%;
 }
-@media screen and (min-width: 992px) {
+@media screen and (max-width: 375px) {
   header svg {
-    width: 100%;
+    height: 30px;
   }
 }
 
@@ -124,6 +147,11 @@ footer img {
   margin-bottom: 15px;
   width: 180px;
   filter: invert(99%) sepia(35%) saturate(0%) hue-rotate(123deg) brightness(107%) contrast(100%);
+}
+@media screen and (max-width: 375px) {
+  footer img {
+    width: 160px;
+  }
 }
 @media screen and (min-width: 992px) {
   footer img {
@@ -152,6 +180,10 @@ footer .footer-content a {
 }
 footer .footer-content a:hover {
   color: #9356DC;
+}
+
+header {
+  padding: 20px 20px 10px 20px;
 }
 
 .localisation {
@@ -296,6 +328,7 @@ footer .footer-content a:hover {
   }
 }
 .restaurants a {
+  color: inherit;
   text-decoration: none;
 }
 .restaurants-cards {
@@ -353,20 +386,6 @@ footer .footer-content a:hover {
   margin: 0px;
   font-weight: 400;
 }
-.restaurants .card .heart {
-  margin-right: 20px;
-  fill: #fff;
-  fill: none;
-  stroke: #000;
-  stroke-width: 30;
-  width: 20px;
-}
-.restaurants .card .heart:hover {
-  stroke: url("#gradient");
-  stroke-width: 30;
-  fill: url("#gradient");
-}
-
 main {
   background-color: #fff;
   flex: 0 1 auto;
@@ -391,15 +410,6 @@ main img {
   margin-bottom: -55px;
   border-radius: 50px 50px 0px 0px;
 }
-@media screen and (min-width: 992px) {
-  .menu {
-    padding: 50px 15% 50px 15%;
-    margin-left: 13%;
-    margin-right: 13%;
-    bottom: 35px;
-    margin-bottom: -35px;
-  }
-}
 @media screen and (min-width: 600px) {
   .menu {
     padding: 50px 15% 50px 15%;
@@ -407,6 +417,12 @@ main img {
     margin-right: 5%;
     bottom: 35px;
     margin-bottom: -35px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu {
+    margin-left: 13%;
+    margin-right: 13%;
   }
 }
 .menu-header {
@@ -427,8 +443,10 @@ main img {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.menu-header i {
-  margin-right: 20px;
+@media screen and (max-width: 375px) {
+  .menu-header h1 {
+    font-size: 1.5rem;
+  }
 }
 .menu .btn-container {
   display: flex;
@@ -456,7 +474,6 @@ main img {
 .entrees .card, .plats .card, .desserts .card {
   position: relative;
   opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -465,6 +482,7 @@ main img {
   border-radius: 20px;
   box-shadow: 0px 5px 8px 0px #EAEAEA;
   font-weight: 500;
+  animation: fadeIn 1s ease-in-out forwards;
 }
 .entrees .card:nth-child(1), .plats .card:nth-child(1), .desserts .card:nth-child(1) {
   animation-delay: 0s;
@@ -511,6 +529,11 @@ main img {
     animation: width-animation-phone 0.3s forwards;
   }
 }
+@media screen and (max-width: 375px) {
+  .entrees .card:hover h3, .entrees .card:hover p, .plats .card:hover h3, .plats .card:hover p, .desserts .card:hover h3, .desserts .card:hover p {
+    animation: width-animation-s-phone 0.3s forwards;
+  }
+}
 @media screen and (min-width: 600px) {
   .entrees .card:hover h3, .entrees .card:hover p, .plats .card:hover h3, .plats .card:hover p, .desserts .card:hover h3, .desserts .card:hover p {
     animation: width-animation-tablet 0.3s forwards;
@@ -525,11 +548,19 @@ main img {
   scale: 1;
   animation: rotate-animation 0.5s;
 }
+.entrees .card .menu-name, .plats .card .menu-name, .desserts .card .menu-name {
+  line-height: 25px;
+}
 .entrees .card h3, .entrees .card p, .plats .card h3, .plats .card p, .desserts .card h3, .desserts .card p {
   margin: 0px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+@media screen and (max-width: 375px) {
+  .entrees .card h3, .entrees .card p, .plats .card h3, .plats .card p, .desserts .card h3, .desserts .card p {
+    width: 220px;
+  }
 }
 .entrees .card p, .plats .card p, .desserts .card p {
   font-weight: 300;

@@ -24,6 +24,12 @@
     padding-bottom: 50px;
 }
 
+@mixin small-phone-only {
+    @media screen and (max-width:map-get($breakpoints, small-phone)){
+        @content;
+    }  
+}
+
 @mixin phone-only {
     @media screen and (max-width:map-get($breakpoints, tablet)){
         @content;
@@ -41,11 +47,3 @@
         @content;
     }  
 }
-
-@mixin media($keys...){
-    @each $key in $keys { 
-      @media (min-width: map-get($breakpoints, $key)){
-        @content
-      } 
-    }
-  }
