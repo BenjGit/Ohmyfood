@@ -55,3 +55,12 @@
         rotate: 0deg;
     }
 }
+
+@keyframes progressive-fill {
+   0%{
+        height: 0;
+    }
+    100%{
+        height: 20;
+    }
+}

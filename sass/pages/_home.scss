@@ -181,7 +181,27 @@ header{
         margin: 0px;
         font-weight: 400;
     }
+    .heart-container {
+        position: relative;
+        display: inline-block;
+      }
+
     .heart{
         @extend %heart;
     }
+    
+    .progressive-fill{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0%;
+        z-index: -1;;
+        background:linear-gradient(#FF79DA 20%, #9356DC 100%);
+        transition: height 0.5s;
+    }
+    
+    .heart-container:hover .progressive-fill {
+        height: 100%;
+      }
 }

@@ -1,13 +1,11 @@
 %heart{
     margin-right:20px;
-    fill: #fff;
     fill: none;
     stroke: #000;
     stroke-width: 30;
     width: 20px;
     &:hover{
-        stroke: url("#gradient");
-        stroke-width: 30;
-        fill:url("#gradient");
+        stroke: none;
+        fill:url(#largeGradient);
     }
 }
