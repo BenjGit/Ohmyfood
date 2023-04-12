@@ -1,11 +1,13 @@
-%heart{
-    margin-right:20px;
-    fill: none;
-    stroke: #000;
-    stroke-width: 30;
-    width: 20px;
-    &:hover{
-        stroke: none;
-        fill:url(#largeGradient);
-    }
+%heart{	
+  margin-right:20px;
+  stroke: #000;
+  stroke-width: 50;
+  width: 21px;
+  &:hover rect {
+    animation: progressive-fill 2s ease-out forwards;
+  }
+  rect {
+  
+  stroke: none;
+  }
 }

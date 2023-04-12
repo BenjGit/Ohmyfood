@@ -75,10 +75,10 @@ h1 {
 }
 @keyframes progressive-fill {
   0% {
-    height: 0;
+    height: 100%;
   }
   100% {
-    height: 20;
+    height: 0%;
   }
 }
 .menu .btn-container .btn-commander, .reservation .btn-reservation {
@@ -97,14 +97,15 @@ h1 {
 
 .menu-header .heart, .restaurants .card .heart {
   margin-right: 20px;
-  fill: none;
   stroke: #000;
-  stroke-width: 30;
-  width: 20px;
+  stroke-width: 50;
+  width: 21px;
 }
-.menu-header .heart:hover, .restaurants .card .heart:hover {
+.menu-header .heart:hover rect, .restaurants .card .heart:hover rect {
+  animation: progressive-fill 2s ease-out forwards;
+}
+.menu-header .heart rect, .restaurants .card .heart rect {
   stroke: none;
-  fill: url(#largeGradient);
 }
 
 header {
@@ -396,20 +397,6 @@ header {
   position: relative;
   display: inline-block;
 }
-.restaurants .card .progressive-fill {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0%;
-  z-index: -1;
-  background: linear-gradient(#FF79DA 20%, #9356DC 100%);
-  transition: height 0.5s;
-}
-.restaurants .card .heart-container:hover .progressive-fill {
-  height: 100%;
-}
-
 main {
   background-color: #fff;
   flex: 0 1 auto;
