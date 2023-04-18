@@ -1,6 +1,28 @@
 header{
     padding: 20px 20px 10px 20px;
 }
+.loader-page{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    animation: display 3s forwards;
+    @include flex-center-all-row
+  }
+.spinner{
+    width: 48px;
+    height: 48px;
+    border: 5px solid $primary-color;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotate 1s linear infinite;
+}
+
 .localisation{
     @include flex-center-h-row;
     gap:15px;
@@ -181,11 +203,6 @@ header{
         margin: 0px;
         font-weight: 400;
     }
-    .heart-container {
-        position: relative;
-        display: inline-block;
-      }
-
     .heart{
         @extend %heart;
     }

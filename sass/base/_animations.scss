@@ -64,3 +64,24 @@
         height: 0%;
     }
 }
+
+@keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+@keyframes display {
+    0%{
+        visibility: visible;
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
