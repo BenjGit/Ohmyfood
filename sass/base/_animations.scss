@@ -49,10 +49,10 @@
 
 @keyframes rotate-animation {
     from{
-        rotate: -360deg;
+        transform:rotate(-360deg);
     }
     to{
-        rotate: 0deg;
+        transform:rotate(0deg);
     }
 }
 

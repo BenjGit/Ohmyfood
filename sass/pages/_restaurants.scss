@@ -101,7 +101,7 @@ main{
             background-color: $tertiary-color;
             color:#fff;
             i{
-                scale: 0;
+                transform: scale(0);
                 font-size: 1.75rem;
             }
         }
@@ -132,7 +132,7 @@ main{
                 }
             }
             i{
-                scale: 1;
+                transform: scale(1);
                 animation: rotate-animation 0.5s;
             }
         }
