@@ -26,11 +26,14 @@ h1 {
   }
 }
 @keyframes background-animation {
-  from {
+  0% {
     width: 0;
   }
-  to {
+  50% {
     width: 80px;
+  }
+  100% {
+    width: 0;
   }
 }
 @keyframes margin-animation {
@@ -522,6 +525,7 @@ main img {
 }
 .entrees .card, .plats .card, .desserts .card {
   position: relative;
+  overflow: hidden;
   opacity: 0;
   display: flex;
   align-items: flex-end;
@@ -552,63 +556,66 @@ main img {
   position: absolute;
   border-radius: 0px 20px 20px 0px;
   top: 0;
-  right: 0;
-  width: 0;
+  right: -80px;
+  width: 80px;
   height: 100%;
   background-color: #99E2D0;
   color: #fff;
+  transition: 1s;
 }
 .entrees .card .animation-box-slide i, .plats .card .animation-box-slide i, .desserts .card .animation-box-slide i {
-  transform: scale(0);
+  transition: transform 500ms;
   font-size: 1.75rem;
 }
 .entrees .card .price, .plats .card .price, .desserts .card .price {
   position: absolute;
   right: 5%;
   font-weight: 700;
+  transition: 500ms;
 }
 .entrees .card:hover .animation-box-slide, .plats .card:hover .animation-box-slide, .desserts .card:hover .animation-box-slide {
-  animation: background-animation 0.3s forwards;
+  transition: 500ms;
+  right: 0;
 }
 .entrees .card:hover .price, .plats .card:hover .price, .desserts .card:hover .price {
-  animation: margin-animation 0.3s forwards;
+  transition: 500ms;
+  right: 100px;
 }
 @media screen and (max-width: 600px) {
   .entrees .card:hover h3, .entrees .card:hover p, .plats .card:hover h3, .plats .card:hover p, .desserts .card:hover h3, .desserts .card:hover p {
-    animation: width-animation-phone 0.3s forwards;
+    transition: 500ms;
+    width: 240px;
   }
 }
 @media screen and (max-width: 375px) {
   .entrees .card:hover h3, .entrees .card:hover p, .plats .card:hover h3, .plats .card:hover p, .desserts .card:hover h3, .desserts .card:hover p {
-    animation: width-animation-s-phone 0.3s forwards;
-  }
-}
-@media screen and (min-width: 600px) {
-  .entrees .card:hover h3, .entrees .card:hover p, .plats .card:hover h3, .plats .card:hover p, .desserts .card:hover h3, .desserts .card:hover p {
-    animation: width-animation-tablet 0.3s forwards;
-  }
-}
-@media screen and (min-width: 992px) {
-  .entrees .card:hover h3, .entrees .card:hover p, .plats .card:hover h3, .plats .card:hover p, .desserts .card:hover h3, .desserts .card:hover p {
-    animation: none;
+    transition: 500ms;
+    width: 150px;
   }
 }
 .entrees .card:hover i, .plats .card:hover i, .desserts .card:hover i {
-  transform: scale(1);
-  animation: rotate-animation 0.5s;
+  transform: rotate(2turn);
 }
 .entrees .card .menu-name, .plats .card .menu-name, .desserts .card .menu-name {
   line-height: 25px;
 }
 .entrees .card h3, .entrees .card p, .plats .card h3, .plats .card p, .desserts .card h3, .desserts .card p {
+  transition: 500ms;
   margin: 0px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+@media screen and (max-width: 600px) {
+  .entrees .card h3, .entrees .card p, .plats .card h3, .plats .card p, .desserts .card h3, .desserts .card p {
+    width: 300px;
+    transition: 500ms;
+  }
+}
 @media screen and (max-width: 375px) {
   .entrees .card h3, .entrees .card p, .plats .card h3, .plats .card p, .desserts .card h3, .desserts .card p {
     width: 220px;
+    transition: 500ms;
   }
 }
 .entrees .card p, .plats .card p, .desserts .card p {

@@ -5,11 +5,14 @@
 }
 
 @keyframes background-animation {
-    from {
+    0% {
         width: 0;
     }
-    to {
+    50% {
         width:80px;
+    }
+    100%{
+        width: 0;
     }
 }
 @keyframes margin-animation {

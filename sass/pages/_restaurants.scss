@@ -74,6 +74,7 @@ main{
     margin-bottom: 40px;
     .card{
         position: relative;
+        overflow: hidden;
         opacity: 0;
         display: flex;
         align-items: flex-end;
@@ -94,13 +95,14 @@ main{
             position:absolute;
             border-radius:0px 20px 20px 0px;
             top: 0;
-            right: 0;
-            width: 0;
+            right: -80px;
+            width: 80px;
             height: 100%;
             background-color: $tertiary-color;
             color:#fff;
+            transition: 1s;
             i{
-                transform: scale(0);
+                transition: transform 500ms;
                 font-size: 1.75rem;
             }
         }
@@ -108,40 +110,44 @@ main{
             position: absolute;
             right: 5%;
             font-weight: 700;
+            transition: 500ms;
         }
         &:hover{
             .animation-box-slide{
-                animation: background-animation 0.3s forwards;
+                transition: 500ms;
+                right: 0;
             }
             .price{
-                animation: margin-animation 0.3s forwards;
+                transition: 500ms;
+                right: 100px;
             }
             h3,p{
-                @include phone-only {
-                    animation:  width-animation-phone 0.3s forwards;
+                @include phone-only{
+                    transition: 500ms;
+                    width: 240px;
                 }
                 @include small-phone-only {
-                    animation:  width-animation-s-phone 0.3s forwards;
-                }
-                @include tablet-only {
-                    animation:  width-animation-tablet 0.3s forwards;
-                }
-                @include desktop-only {
-                    animation:  none;
+                    transition: 500ms;
+                    width: 150px;
                 }
             }
             i{
-                transform: scale(1);
-                animation: rotate-animation 0.5s;
+                transform: rotate(2turn);
             }
         }
         .menu-name{
             line-height: 25px;
         }
         h3,p{
+            @include phone-only {
+                width: 300px;
+                transition: 500ms;
+            }
             @include small-phone-only {
                 width: 220px;
+                transition: 500ms;
             }
+            transition: 500ms;
             margin: 0px;
             overflow: hidden; 
             text-overflow: ellipsis; 
