@@ -4,9 +4,13 @@
   stroke-width: 50;
   width: 21px;
   &:hover rect {
-    animation: progressive-fill 2s ease-out forwards;
+    transition:2s;
+    height:0%;
   }
   rect {
-  stroke: none;
+    transition:2s;
+    stroke: none;
+    stroke-width: 0;
+    height:100%;
   }
 }

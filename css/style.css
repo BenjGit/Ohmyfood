@@ -25,70 +25,6 @@ h1 {
     opacity: 1;
   }
 }
-@keyframes background-animation {
-  0% {
-    width: 0;
-  }
-  50% {
-    width: 80px;
-  }
-  100% {
-    width: 0;
-  }
-}
-@keyframes margin-animation {
-  from {
-    margin-right: 0;
-  }
-  to {
-    margin-right: 80px;
-  }
-}
-@keyframes width-animation-s-phone {
-  from {
-    width: 220px;
-  }
-  to {
-    width: 150px;
-  }
-}
-@keyframes width-animation-phone {
-  from {
-    width: 280px;
-  }
-  to {
-    width: 182px;
-  }
-}
-@keyframes width-animation-tablet {
-  from {
-    width: 280px;
-  }
-  to {
-    width: 210px;
-  }
-}
-@keyframes rotate-animation {
-  from {
-    transform: rotate(-360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-@keyframes progressive-fill {
-  0% {
-    height: 100%;
-  }
-  100% {
-    height: 0%;
-  }
-}
-@keyframes rotate {
-  100% {
-    transform: rotate(360deg);
-  }
-}
 @keyframes display {
   0% {
     visibility: visible;
@@ -123,10 +59,14 @@ h1 {
   width: 21px;
 }
 .menu-header .heart:hover rect, .restaurants .card .heart:hover rect {
-  animation: progressive-fill 2s ease-out forwards;
+  transition: 2s;
+  height: 0%;
 }
 .menu-header .heart rect, .restaurants .card .heart rect {
+  transition: 2s;
   stroke: none;
+  stroke-width: 0;
+  height: 100%;
 }
 
 header {
