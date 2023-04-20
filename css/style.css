@@ -64,11 +64,11 @@ h1 {
   width: 21px;
 }
 .menu-header .heart:hover rect, .restaurants .card .heart:hover rect {
-  transition: 2s;
+  transition: 2s ease-out;
   height: 0%;
 }
 .menu-header .heart rect, .restaurants .card .heart rect {
-  transition: 2s;
+  transition: 2s ease-out;
   stroke: none;
   stroke-width: 0;
   height: 100%;
@@ -516,7 +516,7 @@ main img {
   position: absolute;
   right: 5%;
   font-weight: 700;
-  transition: 500ms;
+  transition: 650ms ease-out;
 }
 .entrees .card:hover .animation-box-slide, .plats .card:hover .animation-box-slide, .desserts .card:hover .animation-box-slide {
   transition: 500ms;

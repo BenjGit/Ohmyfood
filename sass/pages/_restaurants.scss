@@ -110,7 +110,7 @@ main{
             position: absolute;
             right: 5%;
             font-weight: 700;
-            transition: 500ms;
+            transition: 650ms ease-out;
         }
         &:hover{
             .animation-box-slide{
